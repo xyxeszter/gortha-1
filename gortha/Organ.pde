@@ -48,7 +48,9 @@ class Organ{
         corPosNo++;
       }
     }
-    if (corPosNo == neighbours.length){// && neighbours.length == currNeighbours.size()){
+    println("neighbours: "+neighbours.length);
+    println("current neighbours: "+ currNeighbours.size());
+    if (corPosNo == neighbours.length && neighbours.length == currNeighbours.size()-1){
       return true;
     }
     else{

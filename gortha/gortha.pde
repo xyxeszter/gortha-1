@@ -1,9 +1,7 @@
 /*
 - bugs: dragging sometimes fail
 - if everything is conencted to everything, you can treak the code - make sure the number of connection are the real number one organ has
-
-
-
+- new variable for the animtion playing (order)
 
 
 
@@ -151,10 +149,10 @@ void mouseReleased() {
   for (int i = 0; i < OrganArray.size(); i++) {
     Organ org = (Organ) OrganArray.get(i);
     if (org.mouseOver()) {
-      org.locked = true;
       org.selected = false;
       draggedOrgan = 1000;
     }
+    org.locked = true;
   }
   cursor(ARROW);
 }
@@ -197,7 +195,6 @@ void loadOrgans() {
   OrganArray.add(smallInt);
   OrganArray.add(largeInt);
 }
-
 
 
 
